@@ -4,34 +4,48 @@
 <title>MVER</title>
 
 <style>
+
 body{
     margin:0;
-    font-family:Arial;
-    background:#0b0f1a;
+    font-family:Arial, sans-serif;
     color:white;
+    background:url('mver-bg.png');
+    background-size:cover;
+    background-attachment:fixed;
 }
 
-/* TOP BANNER */
 .banner{
-    background:url('banner.png');
-    background-size:cover;
-    background-position:center;
+    background:rgba(0,0,0,0.5);
     height:220px;
     display:flex;
-    align-items:center;
     justify-content:center;
-    font-size:40px;
-    font-weight:bold;
-    letter-spacing:3px;
+    align-items:center;
+    border-bottom:3px solid #38bdf8;
 }
 
-/* NAV */
+.logo-banner{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    width:90px;
+    filter:drop-shadow(0 0 15px #38bdf8);
+}
+
+.banner-title{
+    font-size:70px;
+    font-weight:bold;
+    letter-spacing:4px;
+}
+
 nav{
     display:flex;
     justify-content:center;
     gap:25px;
-    padding:15px;
     background:#0a0a0a;
+    padding:15px;
     position:sticky;
     top:0;
 }
@@ -39,96 +53,116 @@ nav{
 nav a{
     color:white;
     text-decoration:none;
-    opacity:0.8;
     font-weight:bold;
 }
 
 nav a:hover{
-    color:#4da6ff;
-    opacity:1;
+    color:#38bdf8;
 }
 
-/* HERO */
 .hero{
     text-align:center;
-    padding:40px 20px;
+    padding:50px 20px;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero h1{
+    font-size:40px;
 }
 
 .hero p{
-    color:#b8c0cc;
     max-width:700px;
     margin:auto;
+    color:#cbd5e1;
 }
 
-button{
+.tier-btn{
     margin-top:20px;
-    background:#4da6ff;
+    padding:12px 30px;
+    background:#38bdf8;
     border:none;
-    padding:12px 25px;
     border-radius:8px;
     color:white;
+    font-size:18px;
     cursor:pointer;
 }
 
-button:hover{
-    background:#2f8cff;
+.tier-btn:hover{
+    background:#0ea5e9;
 }
 
-/* LEADERBOARD */
 .leaderboard{
-    max-width:500px;
+    max-width:700px;
     margin:40px auto;
 }
 
 .title{
     text-align:center;
-    font-size:22px;
-    margin-bottom:15px;
-    letter-spacing:2px;
+    font-size:32px;
+    margin-bottom:20px;
+    font-weight:bold;
 }
 
-/* CARD */
 .card{
+    background:#0f172a;
+    border:2px solid #38bdf8;
+    border-radius:10px;
+    padding:15px;
+    margin:10px 0;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:#111827;
-    margin:10px 0;
-    padding:12px 15px;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,0.08);
 }
 
-/* LEFT SIDE */
 .left{
+    font-size:22px;
+}
+
+.rank{
+    color:#38bdf8;
+    font-weight:bold;
+}
+
+.right{
     display:flex;
     align-items:center;
     gap:10px;
 }
 
-.rank{
-    font-weight:bold;
-    color:#4da6ff;
+.profile-btn{
+    background:#1e293b;
+    color:white;
+    border:none;
+    border-radius:6px;
+    padding:8px 12px;
+    cursor:pointer;
 }
 
-/* TIER BOX */
+.profile-btn:hover{
+    background:#334155;
+}
+
 .tier{
-    padding:5px 10px;
+    padding:6px 12px;
     border-radius:6px;
     font-weight:bold;
 }
 
-/* COLORS */
-.A{background:#39ff88; color:black;}
-.B{background:#ffd24d; color:black;}
-.C{background:#ff8c42; color:black;}
-</style>
+.A{background:#39ff88;color:black;}
+.B{background:#ffd24d;color:black;}
+.C{background:#ff8c42;color:black;}
 
+</style>
 </head>
 
 <body>
 
-<div class="banner">MVER</div>
+<div class="banner">
+    <div class="logo-banner">
+        <img src="mver-logo.png" alt="MVER Logo" class="logo">
+        <div class="banner-title">MVER</div>
+    </div>
+</div>
 
 <nav>
   <a href="index.html">HOME</a>
@@ -139,70 +173,100 @@ button:hover{
 </nav>
 
 <div class="hero">
-<h1>MultiCraft Visual Editing Rankings</h1>
+<h1>Welcome to MultiCraft Visual Editing Rankings (MVER)</h1>
 
 <p>
-The MultiCraft Visual Editing Ranking is a tier list system to rank editing skills from A–F
-and compete on a Top 10 leaderboard.
+The MultiCraft Visual Editing Ranking is a tier list system to rank your editing skills from A-F and compete against others on a Top 10 leaderboard.
 </p>
 
 <a href="tiers.html">
-<button>View Tiers</button>
+<button class="tier-btn">View Tiers</button>
 </a>
+
 </div>
 
 <div class="leaderboard">
 
-<div class="title">EDITORS LEADERBOARD</div>
+<div class="title">🏆 EDITORS LEADERBOARD</div>
 
 <div class="card">
-  <div class="left"><span class="rank">#1</span> Editor 1</div>
-  <div class="tier A">A-</div>
+<div class="left"><span class="rank">#1</span> Editor 1</div>
+<div class="right">
+<a href="editor1.html"><button class="profile-btn">Profile</button></a>
+<div class="tier A">A-</div>
+</div>
 </div>
 
 <div class="card">
-  <div class="left"><span class="rank">#2</span> Editor 2</div>
-  <div class="tier B">B+</div>
+<div class="left"><span class="rank">#2</span> Editor 2</div>
+<div class="right">
+<a href="editor2.html"><button class="profile-btn">Profile</button></a>
+<div class="tier B">B+</div>
+</div>
 </div>
 
 <div class="card">
-  <div class="left"><span class="rank">#3</span> Editor 3</div>
-  <div class="tier B">B+</div>
+<div class="left"><span class="rank">#3</span> Editor 3</div>
+<div class="right">
+<a href="editor3.html"><button class="profile-btn">Profile</button></a>
+<div class="tier B">B+</div>
+</div>
 </div>
 
 <div class="card">
-  <div class="left"><span class="rank">#4</span> Editor 4</div>
-  <div class="tier B">B+</div>
+<div class="left"><span class="rank">#4</span> Editor 4</div>
+<div class="right">
+<a href="editor4.html"><button class="profile-btn">Profile</button></a>
+<div class="tier B">B+</div>
+</div>
 </div>
 
 <div class="card">
-  <div class="left"><span class="rank">#5</span> Editor 5</div>
-  <div class="tier B">B</div>
+<div class="left"><span class="rank">#5</span> Editor 5</div>
+<div class="right">
+<a href="editor5.html"><button class="profile-btn">Profile</button></a>
+<div class="tier B">B</div>
+</div>
 </div>
 
 <div class="card">
-  <div class="left"><span class="rank">#6</span> Editor 6</div>
-  <div class="tier B">B-</div>
+<div class="left"><span class="rank">#6</span> Editor 6</div>
+<div class="right">
+<a href="editor6.html"><button class="profile-btn">Profile</button></a>
+<div class="tier B">B-</div>
+</div>
 </div>
 
 <div class="card">
-  <div class="left"><span class="rank">#7</span> Editor 7</div>
-  <div class="tier C">C+</div>
+<div class="left"><span class="rank">#7</span> Editor 7</div>
+<div class="right">
+<a href="editor7.html"><button class="profile-btn">Profile</button></a>
+<div class="tier C">C+</div>
+</div>
 </div>
 
 <div class="card">
-  <div class="left"><span class="rank">#8</span> Editor 8</div>
-  <div class="tier C">C</div>
+<div class="left"><span class="rank">#8</span> Editor 8</div>
+<div class="right">
+<a href="editor8.html"><button class="profile-btn">Profile</button></a>
+<div class="tier C">C</div>
+</div>
 </div>
 
 <div class="card">
-  <div class="left"><span class="rank">#9</span> Editor 9</div>
-  <div class="tier C">C</div>
+<div class="left"><span class="rank">#9</span> Editor 9</div>
+<div class="right">
+<a href="editor9.html"><button class="profile-btn">Profile</button></a>
+<div class="tier C">C</div>
+</div>
 </div>
 
 <div class="card">
-  <div class="left"><span class="rank">#10</span> Editor 10</div>
-  <div class="tier C">C-</div>
+<div class="left"><span class="rank">#10</span> Editor 10</div>
+<div class="right">
+<a href="editor10.html"><button class="profile-btn">Profile</button></a>
+<div class="tier C">C-</div>
+</div>
 </div>
 
 </div>
